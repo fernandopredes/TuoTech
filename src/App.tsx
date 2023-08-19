@@ -1,6 +1,8 @@
 import './App.css'
 import MainSection from './Components/HeroSection';
 import Navbar from './Components/Navbar'
+import Products from './Components/Products';
+import QuemSomos from './Components/QuemSomos';
 import video from './assets/video.mp4'
 import styled from 'styled-components';
 
@@ -19,6 +21,8 @@ function App() {
         <MainSection/>
       </HeroContent>
     </HeroSection>
+    <QuemSomos/>
+    <Products/>
     </>
   )
 }
@@ -29,7 +33,7 @@ const BlueOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(54, 85, 143, 0.6);
+  background-color: rgba(32, 50, 84, 0.6);
   z-index: 0;
 `;
 

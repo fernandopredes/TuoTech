@@ -43,12 +43,13 @@ const StyledNav = styled.nav<StyledNavProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 8px;
   position: fixed;
+  border-radius:0 0 5px 5px;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: ${({ isScrolled }) => (isScrolled ? 'transparent' : '#36558f')};
+  background-color: ${({ isScrolled }) => (isScrolled ? '#36558f' : 'transparent')};
   transition: background-color 0.3s ease-in-out;
   z-index: 1000;
 `;

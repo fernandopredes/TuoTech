@@ -10,7 +10,7 @@ const ContactForm = () => {
           <form action="https://formspree.io/YOUREMAIL" method="POST">
             <Input placeholder="Nome" type="text" name="name" required />
             <Input placeholder="E-mail" type="email" name="_replyto" required />
-            <Input placeholder="Assunto" type="text" name="subject" required value={'Preciso de uma consultoria'} />
+            <Input placeholder="Assunto: Preciso de uma consultoria" type="text" name="subject"  />
             <TextArea placeholder="Mensagem" name="message" required></TextArea>
             <CenteredButton>
               <SubmitButton type="submit">Enviar</SubmitButton>

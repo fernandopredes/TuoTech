@@ -1,5 +1,6 @@
 import './App.css'
 import ContactForm from './Components/ContactForm';
+import Footer from './Components/Footer';
 import MainSection from './Components/HeroSection';
 import Navbar from './Components/Navbar'
 import Products from './Components/Products';
@@ -25,6 +26,7 @@ function App() {
     <QuemSomos/>
     <Products/>
     <ContactForm/>
+    <Footer/>
     </>
   )
 }

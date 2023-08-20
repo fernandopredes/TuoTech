@@ -1,4 +1,5 @@
 import './App.css'
+import ContactForm from './Components/ContactForm';
 import MainSection from './Components/HeroSection';
 import Navbar from './Components/Navbar'
 import Products from './Components/Products';
@@ -23,6 +24,7 @@ function App() {
     </HeroSection>
     <QuemSomos/>
     <Products/>
+    <ContactForm/>
     </>
   )
 }

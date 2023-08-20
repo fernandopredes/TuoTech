@@ -16,7 +16,7 @@ const QuemSomos = () => {
 }
 
 const SectionContainer = styled.section`
-  padding: 50px 0;
+  padding: 25px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@ const FlexContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;  
+  gap: 20px;
 `;
 
 const Title = styled.h2`

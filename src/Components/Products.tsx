@@ -4,17 +4,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Products = () => {
   return (
-    <ProductGrid>
-        {productData.map((product) => (
-            <Card key={product.title}>
-                <FontAwesomeIcon icon={product.icon} color="#36558f" size="2x" />
-                <h3>{product.title}</h3>
-                <p>{product.subtitle}</p>
-            </Card>
-        ))}
-    </ProductGrid>
+    <Conteiner>
+      <ProductGrid>
+          {productData.map((product) => (
+              <Card key={product.title}>
+                  <FontAwesomeIcon icon={product.icon} color="#36558f" size="2x" />
+                  <h3>{product.title}</h3>
+                  <p>{product.subtitle}</p>
+              </Card>
+          ))}
+      </ProductGrid>
+    </Conteiner>
 );
 };
+
+const Conteiner = styled.div`
+padding: 48px 0;
+`
 
 const ProductGrid = styled.div`
   display: grid;

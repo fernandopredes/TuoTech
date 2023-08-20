@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faLinkedinIn, faInstagram, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import logo from '../assets/logobranco.png'
 
 const Footer = () => {
 
@@ -11,7 +12,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <Logo src="/logo.png" alt="Logo" />
+        <Logo src={logo} alt="Logo" />
         <Copyright>
           © {getCurrentYear()} Tuo. Todos os direitos reservados.
         </Copyright>
@@ -53,7 +54,7 @@ const FooterContent = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 40px;
+  max-height: 160px;
 `;
 
 const FooterLinks = styled.div`

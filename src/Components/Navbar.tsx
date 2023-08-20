@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import logo1 from '../assets/logobranco.png'
 
 interface StyledNavProps {
   isScrolled: boolean;
@@ -26,7 +27,7 @@ const Navbar = () => {
   return (
     <StyledNav isScrolled={isScrolled}>
       <NavContainer>
-        <Logo src="/logo.png" alt="Logo" />
+        <Logo src={logo1} alt="Logo" />
         <NavLinks>
           <NavLink href="#home">Home</NavLink>
           <NavLink href="#quemsomos">Quem Somos</NavLink>

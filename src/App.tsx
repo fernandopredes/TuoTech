@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      <HeroSection>
+      <HeroSection id="home">
       <HeroVideo autoPlay loop muted>
         <source src={video} type="video/mp4" />
         Seu navegador não suporta o elemento de vídeo.
@@ -23,9 +23,9 @@ function App() {
         <MainSection/>
       </HeroContent>
     </HeroSection>
-    <QuemSomos/>
-    <Products/>
-    <ContactForm/>
+    <QuemSomos id="quemsomos"/>
+    <Products id="produtos"/>
+    <ContactForm id="contato"/>
     <Footer/>
     </>
   )

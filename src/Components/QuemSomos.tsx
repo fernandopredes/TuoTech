@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 import image from '../assets/hero.jpg'
 
-const QuemSomos = () => {
+interface QuemSomosProps {
+  id?: string;
+}
+
+const QuemSomos: React.FC<QuemSomosProps> = ({ id })=> {
   return (
-    <SectionContainer>
+    <SectionContainer id={id}>
       <Title>Quem Somos</Title>
       <FlexContainer>
         <Description>

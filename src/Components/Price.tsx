@@ -1,9 +1,13 @@
 
 import styled from 'styled-components';
 
-const Price = () => {
+interface PriceProps {
+  id?: string;
+}
+
+const Price: React.FC<PriceProps> = ({ id })=> {
     return (
-        <PriceSection>
+        <PriceSection id={id}>
             <h2>Solicite agora sua consultoria LGPD 100% gratuita</h2>
         </PriceSection>
     );

@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
-const MainSection = () => {
+interface HeroProps {
+  id?: string;
+}
+
+const MainSection: React.FC<HeroProps> = ({ id })=> {
   return (
-    <HeroContent>
+    <HeroContent id={id}>
       <TextSection>
         <h1>Tuo</h1>
         <h2>Sua Parceira em Conformidade com a LGPD</h2>

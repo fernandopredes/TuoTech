@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 import image from '../assets/form.jpg'
 
-const ContactForm = () => {
+interface ContactProps {
+  id?: string;
+}
+
+
+const ContactForm: React.FC<ContactProps> = ({ id })=> {
   return (
-    <FormContainer>
+    <FormContainer id={id}>
       <h2>Solicite agora sua primeira consultoria LGPD 100% gratuita</h2>
       <ContentWrapper>
         <FormWrapper>

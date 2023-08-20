@@ -2,9 +2,13 @@ import styled from 'styled-components';
 import productData from './Product'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Products = () => {
+interface ProductsProps {
+  id?: string;
+}
+
+const Products: React.FC<ProductsProps> = ({ id })=> {
   return (
-    <Conteiner>
+    <Conteiner id={id}>
       <ProductGrid>
           {productData.map((product) => (
               <Card key={product.title}>

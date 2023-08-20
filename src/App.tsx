@@ -1,4 +1,5 @@
 import './App.css'
+import Certification from './Components/Certification';
 import ContactForm from './Components/ContactForm';
 import Footer from './Components/Footer';
 import MainSection from './Components/HeroSection';
@@ -25,6 +26,7 @@ function App() {
     </HeroSection>
     <QuemSomos id="quemsomos"/>
     <Products id="produtos"/>
+    <Certification id="certificados"/>
     <ContactForm id="contato"/>
     <Footer/>
     </>

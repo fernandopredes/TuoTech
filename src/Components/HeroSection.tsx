@@ -4,8 +4,9 @@ const MainSection = () => {
   return (
     <HeroContent>
       <TextSection>
-        <h1>Sua Parceira em Conformidade com a LGPD</h1>
-        <h2><span>Protegendo</span> seus dados e <span>fortalecendo</span> sua empresa.</h2>
+        <h1>Tuo</h1>
+        <h2>Sua Parceira em Conformidade com a LGPD</h2>
+        <h3><span>Protegendo</span> seus dados e <span>fortalecendo</span> sua empresa.</h3>
       </TextSection>
     </HeroContent>
   )
@@ -28,11 +29,20 @@ const HeroContent = styled.div`
 const TextSection = styled.div`
   flex: 1;
 
-  h2 {
+  h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #ededed;
+    margin: 0;
+  }
+
+  h3 {
     font-family: 'IBM Plex Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px; // Efeito "vivo"
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight:200;
     color: #EDEDED;
     span {
@@ -41,11 +51,11 @@ const TextSection = styled.div`
     }
   }
 
-  h1 {
+  h2 {
     font-family: 'IBM Plex Sans', sans-serif;
     text-transform: uppercase;
-    font-size: 3rem; // Ajuste conforme necessário
-    font-weight: 600;
+    font-size: 2rem; // Ajuste conforme necessário
+    font-weight: 400;
     color: #EDEDED; // Uma cor clara que contraste bem com azul
 
     span {

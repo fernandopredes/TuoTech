@@ -1,35 +1,74 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Certification from './Components/Certification';
+import ContactForm from './Components/ContactForm';
+import Footer from './Components/Footer';
+import MainSection from './Components/HeroSection';
+import Navbar from './Components/Navbar'
+import Products from './Components/Products';
+import QuemSomos from './Components/QuemSomos';
+import video from './assets/video.mp4'
+import styled from 'styled-components';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar/>
+      <HeroSection id="home">
+      <HeroVideo autoPlay loop muted>
+        <source src={video} type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </HeroVideo>
+      <BlueOverlay />
+      <HeroContent>
+        <MainSection/>
+      </HeroContent>
+    </HeroSection>
+    <QuemSomos id="quemsomos"/>
+    <Products id="produtos"/>
+    <Certification id="certificados"/>
+    <ContactForm id="contato"/>
+    <Footer/>
     </>
   )
 }
+
+const BlueOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(32, 50, 84, 0.6);
+  z-index: 0;
+`;
+
+const HeroSection = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+`;
+
+const HeroVideo = styled.video`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;     /* O vídeo irá ocupar a largura total */
+  height: auto;    /* A altura será ajustada proporcionalmente */
+  z-index: -1;
+
+  /* Assegura que o vídeo ocupe toda a altura e largura do container */
+  min-height: 100%;
+  min-width: 100%;
+`;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 1;
+  height: 600px;
+  /* Estilize seu conteúdo aqui */
+`;
 
 export default App

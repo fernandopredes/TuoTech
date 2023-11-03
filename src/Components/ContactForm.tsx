@@ -1,27 +1,45 @@
 import styled from 'styled-components';
 import image from '../assets/form.jpg'
+import { useForm, ValidationError } from '@formspree/react';
 
 interface ContactProps {
   id?: string;
 }
 
 
-const ContactForm: React.FC<ContactProps> = ({ id })=> {
+const ContactForm: React.FC<ContactProps> = ({ id }) => {
+  const [state, handleSubmit] = useForm("xaygkowj");
+  console.log(state)
   return (
     <FormContainer id={id}>
       <h2>Solicite agora sua primeira consultoria LGPD 100% gratuita</h2>
       <ContentWrapper>
         <FormWrapper>
-          <form action="https://formspree.io/YOUREMAIL" method="POST">
+          <form onSubmit={handleSubmit}>
             <Input placeholder="Nome" type="text" name="name" required />
-            <Input placeholder="E-mail" type="email" name="_replyto" required />
-            <Input placeholder="Assunto: Preciso de uma consultoria" type="text" name="subject"  />
-            <TextArea placeholder="Mensagem" name="message" required></TextArea>
+            <Input
+              id="email"
+              placeholder="E-mail"
+              type="email"
+              name="_replyto"
+              required
+            />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+            <Input placeholder="Assunto: Preciso de uma consultoria" type="text" name="subject" />
+
+            <TextArea id="message" placeholder="Mensagem" name="message" required />
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
+
             <CenteredButton>
-              <SubmitButton type="submit">Enviar</SubmitButton>
+            <SubmitButton type="submit" disabled={state.succeeded}>
+              Enviar
+            </SubmitButton>
             </CenteredButton>
           </form>
+          {state.succeeded && <p>Obrigado! Em breve entraremos em contato.</p>}
         </FormWrapper>
+
         <ImageWrapper>
           <img src={image} alt="Homem escrevendo em quadro" />
         </ImageWrapper>
@@ -29,6 +47,7 @@ const ContactForm: React.FC<ContactProps> = ({ id })=> {
     </FormContainer>
   );
 };
+
 
 const FormContainer = styled.div`
     background-color: var(--color-gold2);
@@ -101,6 +120,10 @@ const SubmitButton = styled.button`
 
     &:hover {
       background-color: var(--color-gold3);;
+    }
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: 0.6;
     }
 `;
 

@@ -31,17 +31,17 @@ const ContactForm: React.FC<ContactProps> = ({ id })=> {
 };
 
 const FormContainer = styled.div`
-    background-color: #f5f5fa;
+    background-color: var(--color-gold2);
     padding: 50px 0;
     text-align: center;
     h2 {
-        font-size: 2.8rem;  // Aumentando o tamanho da fonte
-        letter-spacing: 1.2px;  // Adicionando espaçamento entre letras
-        font-weight: 700;  // Peso da fonte mais forte
+        font-size: 2.8rem;
+        letter-spacing: 1.2px;
+        font-weight: 700;
         margin: 0;
         padding: 36px;
-        color: #36558f;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);  // Adicionando uma leve sombra
+        color: var(--color-black2);
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 `;
 
@@ -93,14 +93,14 @@ const SubmitButton = styled.button`
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #36558f;
-    color: #ffffff;
+    background-color: var(--color-gold);
+    color: var(--color-black2);
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: #2d487c;
+      background-color: var(--color-gold3);;
     }
 `;
 

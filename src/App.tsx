@@ -6,7 +6,7 @@ import MainSection from './Components/HeroSection';
 import Navbar from './Components/Navbar'
 import Products from './Components/Products';
 import QuemSomos from './Components/QuemSomos';
-import video from './assets/video.mp4'
+import video from './assets/compressed.mp4'
 import styled from 'styled-components';
 
 function App() {
@@ -39,7 +39,7 @@ const BlueOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(32, 50, 84, 0.6);
+  background-color: rgba(54, 53, 39, 0.6);
   z-index: 0;
 `;
 
@@ -55,8 +55,8 @@ const HeroVideo = styled.video`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;     /* O vídeo irá ocupar a largura total */
-  height: auto;    /* A altura será ajustada proporcionalmente */
+  width: 100%;
+  height: auto;
   z-index: -1;
 
   /* Assegura que o vídeo ocupe toda a altura e largura do container */

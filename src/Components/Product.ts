@@ -66,9 +66,9 @@ const productData = [
     subtitle: "Estratégias e ações a serem tomadas em caso de incidentes de segurança."
   },
   {
-    title: "Gestão de Projetos",
+    title: "Escritório de Processos",
     icon: faTasks,
-    subtitle: "Técnicas e ferramentas para gerenciar projetos de forma eficaz."
+    subtitle: "Estrutura organizacional dedicada à gestão, melhoria e padronização dos processos de negócio de uma organização."
   },
   {
     title: "Adaptação de Contratos de Trabalho",

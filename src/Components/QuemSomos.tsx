@@ -11,7 +11,7 @@ const QuemSomos: React.FC<QuemSomosProps> = ({ id })=> {
       <Title>Quem Somos</Title>
       <FlexContainer>
         <Description>
-        Fundada em 2023, a Tuo dedica-se a orientar empresas através das exigências da LGPD. Nossa visão é transformar a conformidade em vantagem competitiva, ressaltando sempre a integridade e transparência. Com uma equipe de especialistas, temos elevado o padrão de privacidade e proteção de dados para diversas organizações, reafirmando nosso compromisso com a excelência no mercado.
+        A Tuo Sec Secure Privacy dedica-se a orientar empresas através das exigências da LGPD. Nossa visão é transformar a conformidade em vantagem competitiva, ressaltando sempre a integridade e transparência. Com uma equipe de especialistas, temos elevado o padrão de privacidade e proteção de dados para diversas organizações, reafirmando nosso compromisso com a excelência no mercado.
         </Description>
         <CompanyImage src={image} alt="imagem de cadeado" />
       </FlexContainer>

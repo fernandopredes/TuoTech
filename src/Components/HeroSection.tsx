@@ -22,7 +22,6 @@ const HeroContent = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,25 +32,24 @@ const HeroContent = styled.div`
 const TextSection = styled.div`
   flex: 1;
 
-  h1{
+  h1 {
     font-family: 'IBM Plex Sans', sans-serif;
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 600;
     color: #ededed;
     margin: 0;
-  }
 
-  h3 {
-    font-family: 'IBM Plex Sans', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1rem;
-    font-weight:200;
-    color: #EDEDED;
-    span {
-      color: var(--color-gold);
-      font-weight: bold;
+    @media (max-width: 992px) {
+      font-size: 3rem; // Smaller font size for tablets and small desktops
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem; // Even smaller font size for landscape phones and small tablets
+    }
+
+    @media (max-width: 576px) {
+      font-size: 2rem; // Small font size for portrait phones
     }
   }
 
@@ -60,13 +58,46 @@ const TextSection = styled.div`
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 400;
-    color: #EDEDED;
+    color: #ededed;
+
+    @media (max-width: 992px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1rem;
+    }
+  }
+
+  h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #ededed;
+
+    @media (max-width: 992px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 0.7rem;
+    }
 
     span {
-      color: #e1d00d;
+      color: var(--color-gold);
       font-weight: bold;
     }
   }
-`;
+`
 
 export default MainSection

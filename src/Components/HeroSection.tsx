@@ -8,7 +8,7 @@ const MainSection: React.FC<HeroProps> = ({ id })=> {
   return (
     <HeroContent id={id}>
       <TextSection>
-        <h1>Tuo</h1>
+        <h1>Tuo Sec</h1>
         <h2>Sua Parceira em Conformidade com a LGPD</h2>
         <h3><span>Protegendo</span> seus dados e <span>fortalecendo</span> sua empresa.</h3>
       </TextSection>
@@ -17,15 +17,15 @@ const MainSection: React.FC<HeroProps> = ({ id })=> {
 }
 
 const HeroContent = styled.div`
-  position: absolute; // Para posicionar-se em relação ao HeroSection
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 
   display: flex;
-  align-items: center; // Centraliza verticalmente
-  justify-content: center; // Centraliza horizontalmente
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 2rem;
 `;
@@ -45,12 +45,12 @@ const TextSection = styled.div`
   h3 {
     font-family: 'IBM Plex Sans', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px; // Efeito "vivo"
+    letter-spacing: 2px;
     font-size: 1rem;
     font-weight:200;
     color: #EDEDED;
     span {
-      color: #e1d00d;
+      color: var(--color-gold);
       font-weight: bold;
     }
   }
@@ -58,12 +58,12 @@ const TextSection = styled.div`
   h2 {
     font-family: 'IBM Plex Sans', sans-serif;
     text-transform: uppercase;
-    font-size: 2rem; // Ajuste conforme necessário
+    font-size: 2rem;
     font-weight: 400;
-    color: #EDEDED; // Uma cor clara que contraste bem com azul
+    color: #EDEDED;
 
     span {
-      color: #e1d00d; // Uma cor dourada para destacar "LGPD". Ajuste conforme desejado.
+      color: #e1d00d;
       font-weight: bold;
     }
   }

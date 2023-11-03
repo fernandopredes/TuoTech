@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faLinkedinIn, faInstagram, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import logo from '../assets/logobranco.png'
+import logo from '../assets/logo3.png'
 
 const Footer = () => {
 
@@ -14,7 +14,7 @@ const Footer = () => {
       <FooterContent>
         <Logo src={logo} alt="Logo" />
         <Copyright>
-          © {getCurrentYear()} Tuo. Todos os direitos reservados.
+          © {getCurrentYear()} TUO SEC. Todos os direitos reservados.
         </Copyright>
         <FooterLinks>
 
@@ -39,7 +39,7 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.footer`
-  background-color: #36558f;
+  background-color: var(--color-black2);
   padding: 60px 0;
   border-radius:5px 5px 0 0;
 `;
@@ -66,13 +66,14 @@ const Copyright = styled.p`
   font-size: 1rem;
   color: white;
   margin-top: 20px;
-  text-align: center; // centraliza o texto
+  text-align: center;
 `;
 
 const SocialMediaLinks = styled.div`
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  visibility: hidden;
 `;
 
 const SocialIconLink = styled.a`

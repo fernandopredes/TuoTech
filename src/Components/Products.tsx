@@ -12,7 +12,7 @@ const Products: React.FC<ProductsProps> = ({ id })=> {
       <ProductGrid>
           {productData.map((product) => (
               <Card key={product.title}>
-                  <FontAwesomeIcon icon={product.icon} color="#36558f" size="2x" />
+                  <FontAwesomeIcon icon={product.icon} color="var(--color-black)" size="2x" />
                   <h3>{product.title}</h3>
                   <p>{product.subtitle}</p>
               </Card>
@@ -56,13 +56,13 @@ const Card = styled.div`
   align-items: center;
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease, border 0.3s ease; // Adicionei a transição da borda
-  border: 2px solid transparent; // Borda transparente
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
 
   &:hover {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
-    border: 2px solid #36558f; // Borda azul ao pairar
+    border: 2px solid var(--color-gold);
   }
 
   h3 {

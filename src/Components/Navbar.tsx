@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import logo1 from '../assets/logobranco.png'
+import logo1 from '../assets/loco-white.png'
 
 interface StyledNavProps {
   isScrolled: boolean;
@@ -50,7 +50,7 @@ const StyledNav = styled.nav<StyledNavProps>`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: ${({ isScrolled }) => (isScrolled ? '#36558f' : 'transparent')};
+  background-color: ${({ isScrolled }) => (isScrolled ? 'var(--color-black2)' : 'transparent')};
   transition: background-color 0.3s ease-in-out;
   z-index: 1000;
 `;
@@ -80,7 +80,7 @@ const NavLink = styled.a`
   font-weight: bold;
   cursor: pointer;
   &:hover {
-    color: #b0bed9;
+    color: var(--color-gold);
   }
 `;
 

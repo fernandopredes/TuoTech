@@ -48,6 +48,10 @@ const HeroSection = styled.div`
   overflow: hidden;
   width: 100%;
   height: 600px;
+
+  @media (max-width: 1000px) {
+    height: 500px;
+  }
 `;
 
 const HeroVideo = styled.video`
@@ -62,6 +66,14 @@ const HeroVideo = styled.video`
   /* Assegura que o vídeo ocupe toda a altura e largura do container */
   min-height: 100%;
   min-width: 100%;
+  @media (max-width: 1000px) {
+    width: auto;
+    height: 100%;
+    /* Faz o vídeo cobrir toda a área disponível, mantendo a proporção */
+    object-fit: cover;
+    /* Alinha o vídeo ao centro do container em todos os momentos */
+    object-position: center;
+  }
 `;
 
 const HeroContent = styled.div`

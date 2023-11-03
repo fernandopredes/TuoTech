@@ -32,7 +32,12 @@ const FlexContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 60px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h2`
@@ -41,14 +46,22 @@ const Title = styled.h2`
   margin-bottom: 30px;
   color: #333;
   letter-spacing: 1px;
-`;
 
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+`;
 
 const CompanyImage = styled.img`
   max-width: 30%;
   height: auto;
   margin-bottom: 30px;
-  border-radius: 10px; // opcional
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
 `;
 
 const Description = styled.p`
@@ -58,7 +71,14 @@ const Description = styled.p`
   text-align: justify;
   color: #555;
   margin-bottom: 30px;
-  max-width: 480px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 20px;
+  }
 `;
+
 
 export default QuemSomos;

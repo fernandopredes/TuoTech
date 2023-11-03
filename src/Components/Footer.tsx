@@ -40,8 +40,12 @@ const Footer = () => {
 
 const FooterContainer = styled.footer`
   background-color: var(--color-black2);
-  padding: 60px 0;
+  padding: 40px 20px;
   border-radius:5px 5px 0 0;
+
+  @media (max-width: 768px) {
+    padding: 30px 15px;
+  }
 `;
 
 const FooterContent = styled.div`
@@ -50,16 +54,29 @@ const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0 auto;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const Logo = styled.img`
-  max-height: 160px;
+  max-height: 120px;
+  @media (max-width: 768px) {
+    max-height: 80px;
+  }
 `;
 
+
 const FooterLinks = styled.div`
-  display: flex;
-  align-items: center;
+  @media (max-width: 768px) {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 const Copyright = styled.p`
@@ -70,11 +87,17 @@ const Copyright = styled.p`
 `;
 
 const SocialMediaLinks = styled.div`
+  visibility: hidden;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
-  visibility: hidden;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    visibility: hidden;
+  }
 `;
+
 
 const SocialIconLink = styled.a`
   color: white;

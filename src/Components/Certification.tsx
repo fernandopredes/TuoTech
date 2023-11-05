@@ -36,7 +36,7 @@ const Title = styled.h2`
 
 const CertificationImage = styled.img`
   width: 100%;
-  max-width: 15vw;
+  max-width: 10vw;
   height: auto;
 
   @media (max-width: 768px) {
@@ -44,7 +44,7 @@ const CertificationImage = styled.img`
   }
 
   @media (max-width: 480px) {
-    max-width: 80vw;
+    max-width: 40vw;
   }
 `;
 
@@ -52,10 +52,10 @@ const ImageRow = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+ 
 
   @media (max-width: 768px) {
-    gap: 10px; 
+    gap: 10px;
   }
 `;
 

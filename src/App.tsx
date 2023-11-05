@@ -6,7 +6,7 @@ import MainSection from './Components/HeroSection';
 import Navbar from './Components/Navbar'
 import Products from './Components/Products';
 import QuemSomos from './Components/QuemSomos';
-import video from './assets/video.mp4'
+import video from './assets/compressed.mp4'
 import styled from 'styled-components';
 
 function App() {
@@ -39,7 +39,7 @@ const BlueOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(32, 50, 84, 0.6);
+  background-color: rgba(54, 53, 39, 0.6);
   z-index: 0;
 `;
 
@@ -48,6 +48,10 @@ const HeroSection = styled.div`
   overflow: hidden;
   width: 100%;
   height: 600px;
+
+  @media (max-width: 1000px) {
+    height: 500px;
+  }
 `;
 
 const HeroVideo = styled.video`
@@ -55,13 +59,21 @@ const HeroVideo = styled.video`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;     /* O vídeo irá ocupar a largura total */
-  height: auto;    /* A altura será ajustada proporcionalmente */
+  width: 100%;
+  height: auto;
   z-index: -1;
 
   /* Assegura que o vídeo ocupe toda a altura e largura do container */
   min-height: 100%;
   min-width: 100%;
+  @media (max-width: 1000px) {
+    width: auto;
+    height: 100%;
+    /* Faz o vídeo cobrir toda a área disponível, mantendo a proporção */
+    object-fit: cover;
+    /* Alinha o vídeo ao centro do container em todos os momentos */
+    object-position: center;
+  }
 `;
 
 const HeroContent = styled.div`

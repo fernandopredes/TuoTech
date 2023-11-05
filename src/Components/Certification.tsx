@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 import estrela1 from '../assets/estrela1.png';
 import estrela2 from '../assets/estrela2.png';
-import certificado from '../assets/professional.png';
-import certificado2 from '../assets/professional2.png';
-import certificado3 from '../assets/professional3.png';
-import certificado4 from '../assets/professional4.png';
+import certificado from '../assets/apdados.png';
+
 
 type Props = {
   id?: string;
@@ -17,12 +15,7 @@ const Certification = ({ id }: Props) => {
       <ImageRow>
         <CertificationImage src={estrela1} alt="Certificado 1" />
         <CertificationImage src={estrela2} alt="Certificado 2" />
-      </ImageRow>
-      <ImageRow>
         <CertificationImage src={certificado} alt="Certificado 3" />
-        <CertificationImage src={certificado2} alt="Certificado 4" />
-        <CertificationImage src={certificado3} alt="Certificado 5" />
-        <CertificationImage src={certificado4} alt="Certificado 6" />
       </ImageRow>
     </CertificationsContainer>
   );

@@ -1,44 +1,10 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import logo1 from '../assets/logobranco.png'
+import logo1 from '../assets/loco-white.png'
 
 interface StyledNavProps {
   isScrolled: boolean;
 }
-
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  return (
-    <StyledNav isScrolled={isScrolled}>
-      <NavContainer>
-        <Logo src={logo1} alt="Logo" />
-        <NavLinks>
-          <NavLink href="#home">Home</NavLink>
-          <NavLink href="#quemsomos">Quem Somos</NavLink>
-          <NavLink href="#produtos">Produtos</NavLink>
-          <NavLink href="#certificados">Certificações</NavLink>
-          <NavLink href="#contato">Contato</NavLink>
-        </NavLinks>
-      </NavContainer>
-    </StyledNav>
-  );
-};
 
 const StyledNav = styled.nav<StyledNavProps>`
   display: flex;
@@ -50,7 +16,7 @@ const StyledNav = styled.nav<StyledNavProps>`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: ${({ isScrolled }) => (isScrolled ? '#36558f' : 'transparent')};
+  background-color: ${({ isScrolled }) => (isScrolled ? 'var(--color-black2)' : 'transparent')};
   transition: background-color 0.3s ease-in-out;
   z-index: 1000;
 `;
@@ -68,11 +34,6 @@ const Logo = styled.img`
   height: 40px;
 `;
 
-const NavLinks = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 const NavLink = styled.a`
   color: white;
   text-decoration: none;
@@ -80,8 +41,93 @@ const NavLink = styled.a`
   font-weight: bold;
   cursor: pointer;
   &:hover {
-    color: #b0bed9;
+    color: var(--color-gold);
   }
 `;
+
+
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <StyledNav isScrolled={isScrolled}>
+      <NavContainer>
+        <Logo src={logo1} alt="Logo" />
+        <MobileIcon onClick={() => setMenuOpen(!menuOpen)}>
+          <div />
+          <div />
+          <div />
+        </MobileIcon>
+        <NavLinks open={menuOpen} isScrolled={isScrolled}>
+          <NavLink href="#home" onClick={closeMenu}>Home</NavLink>
+          <NavLink href="#quemsomos" onClick={closeMenu}>Quem Somos</NavLink>
+          <NavLink href="#produtos" onClick={closeMenu}>Produtos</NavLink>
+          <NavLink href="#certificados" onClick={closeMenu}>Certificações</NavLink>
+          <NavLink href="#contato" onClick={closeMenu}>Contato</NavLink>
+        </NavLinks>
+      </NavContainer>
+    </StyledNav>
+  );
+};
+
+const MobileIcon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    cursor: pointer;
+    div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+      transition: 0.3s;
+    }
+  }
+`;
+
+const NavLinks = styled.div<{ open: boolean; isScrolled: boolean }>`
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, background-color 0.3s ease-in-out;
+    max-height: ${({ open }) => (open ? '300px' : '0')};
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: ${({ open, isScrolled }) => open || isScrolled ? 'var(--color-black2)' : 'transparent'};
+    ${NavLink} {
+      margin: 10px 0;
+      color: white;
+      display: block;
+    }
+  }
+`;
+
+
 
 export default Navbar;

@@ -34,21 +34,29 @@ const Title = styled.h2`
   color: #333;
 `;
 
-const ImageRow = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 20px; // Espaçamento entre as imagens
-  margin-bottom: 20px; // Espaçamento entre as linhas de imagens
+const CertificationImage = styled.img`
+  width: 100%;
+  max-width: 10vw;
+  height: auto;
 
-  &:last-child {
-    margin-bottom: 0; // Remove o espaço extra na última linha
+  @media (max-width: 768px) {
+    max-width: 30vw;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 40vw;
   }
 `;
 
-const CertificationImage = styled.img`
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+const ImageRow = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ 
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
 `;
 
 export default Certification;

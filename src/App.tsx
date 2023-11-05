@@ -15,7 +15,7 @@ function App() {
     <>
       <Navbar/>
       <HeroSection id="home">
-      <HeroVideo autoPlay loop muted>
+      <HeroVideo autoPlay loop muted playsInline>
         <source src={video} type="video/mp4" />
         Seu navegador não suporta o elemento de vídeo.
       </HeroVideo>

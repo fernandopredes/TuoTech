@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /caminho-para-pagina-privada/
+Allow: /
+Sitemap: https://www.tuosec.com/sitemap.xml

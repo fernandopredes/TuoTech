@@ -16,8 +16,7 @@ const StyledNav = styled.nav<StyledNavProps>`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: ${({ isScrolled }) => (isScrolled ? 'var(--color-black2)' : 'transparent')};
-  transition: background-color 0.3s ease-in-out;
+  background-color: var(--color-black2);
   z-index: 1000;
 `;
 
@@ -31,7 +30,7 @@ const NavContainer = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 40px;
+  height: 60px;
 `;
 
 const NavLink = styled.a`

@@ -1,6 +1,7 @@
 import './App.css'
 import Certification from './Components/Certification';
 import ContactForm from './Components/ContactForm';
+import { CookieConsent } from './Components/CookieConsent';
 import Footer from './Components/Footer';
 import MainSection from './Components/HeroSection';
 import Navbar from './Components/Navbar'
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Navbar/>
+      <CookieConsent />
       <HeroSection id="home">
       <HeroVideo autoPlay loop muted playsInline>
         <source src={video} type="video/mp4" />

@@ -12,7 +12,7 @@ const ContactForm: React.FC<ContactProps> = ({ id }) => {
   console.log(state)
   return (
     <FormContainer id={id}>
-      <h2>Solicite agora sua primeira consultoria LGPD 100% gratuita</h2>
+      <h2>Solicite agora sua primeira consultoria LGPD</h2>
       <ContentWrapper>
         <FormWrapper>
           <form onSubmit={handleSubmit}>

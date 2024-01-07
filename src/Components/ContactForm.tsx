@@ -47,9 +47,9 @@ const ContactForm: React.FC<ContactProps> = ({ id }) => {
         </ImageWrapper>
       </ContentWrapper>
       <WhatsAppMessage>
-        Ou entre em contato pelo  WhatsApp:
-        <a href="https://wa.me/5521970812568/?text=Gostaria%20de%20solicitar%2minha%20primeira%20consultoria" target="_blank">
-        (21)97081-2568 <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+        Ou entre em contato pelo
+        <a href="https://wa.me/5521970812568/?text=Gostaria%20de%20solicitar%20minha%20primeira%20consultoria" target="_blank">
+        WhatsApp <FontAwesomeIcon icon={faWhatsapp} size="2x" />
         </a>
       </WhatsAppMessage>
     </FormContainer>
@@ -174,11 +174,10 @@ const WhatsAppMessage = styled.p`
         align-items: center;
         color: #25D366;
         text-decoration: none;
-        margin-left: 1rem;
-
+        margin-left: .5rem;
 
         svg {
-            margin-left: 0.5rem;
+            margin-left: 0.2rem;
         }
     }
 

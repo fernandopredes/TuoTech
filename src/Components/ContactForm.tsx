@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import image from '../assets/form.jpg'
 import { useForm, ValidationError } from '@formspree/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 interface ContactProps {
   id?: string;
@@ -39,11 +42,16 @@ const ContactForm: React.FC<ContactProps> = ({ id }) => {
           </form>
           {state.succeeded && <p>Obrigado! Em breve entraremos em contato.</p>}
         </FormWrapper>
-
         <ImageWrapper>
-          <img src={image} alt="Homem escrevendo em quadro" />
+          <img src={image} alt="Cadeado" />
         </ImageWrapper>
       </ContentWrapper>
+      <WhatsAppMessage>
+        Ou entre em contato pelo  WhatsApp:
+        <a href="https://wa.me/5521970812568/?text=Gostaria%20de%20solicitar%2minha%20primeira%20consultoria" target="_blank">
+        (21)97081-2568 <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+        </a>
+      </WhatsAppMessage>
     </FormContainer>
   );
 };
@@ -150,6 +158,32 @@ const SubmitButton = styled.button`
     &[disabled] {
       cursor: not-allowed;
       opacity: 0.6;
+    }
+`;
+
+const WhatsAppMessage = styled.p`
+    font-weight: 600;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    color: var(--color-black2);
+
+
+    a {
+        font-size: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        color: #25D366;
+        text-decoration: none;
+        margin-left: 1rem;
+
+
+        svg {
+            margin-left: 0.5rem;
+        }
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 `;
 
